@@ -2,10 +2,10 @@
     "homepage": "https://github.com/Chaos-Cement/innate-qualities/releases",
     "promos": {
         "1.10.2-latest": "0.0.2",
-        "1.10.2-recommended": "0.0.1"
+        "1.10.2-recommended": "0.0.2"
     },
     "1.10.2": {
         "0.0.2": "Not real\n",
-		"0.0.1": "Inital Release\n"
+	"0.0.1": "Inital Release\n"
     }
 }
