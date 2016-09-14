@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = InnateQualities.MODID, version = InnateQualities.VERSION, useMetadata = true)
+@Mod(modid = InnateQualities.MODID, version = InnateQualities.VERSION, updateJSON = "https://raw.githubusercontent.com/Chaos-Cement/innate-qualities/master/update.json", useMetadata = true)
 public class InnateQualities
 {
     public static final String MODID = "innatequalities";

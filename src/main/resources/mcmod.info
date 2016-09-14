@@ -6,11 +6,10 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://github.com/Chaos-Cement/innate-qualities",
-  "updateUrl": "",
   "authorList": ["Chaos Cement Team"],
   "credits": "Everyone who makes good tutorials",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["mod_MinecraftForge"]
 }
 ]
