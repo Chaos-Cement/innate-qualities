@@ -1,6 +1,7 @@
 package chaoscement.innatequalities;
 
 
+import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.init.ModItems;
 import chaoscement.innatequalities.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
@@ -28,6 +29,9 @@ public class InnateQualities
 		
 		ModItems.init();
 		ModItems.register();
+		
+		ModBlocks.init();
+		ModBlocks.register();
 	}
 	
 	@EventHandler

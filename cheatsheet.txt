@@ -17,3 +17,6 @@
 4.3 Copy in JSON from existing item
 4.4 Change layer0 line to the unlocalized name of the item (or whatever the png in the texture folder is name)
 4.5 Add png texture to item texture folder (named <whatever is in 4.4>.png)
+
+# Add Block
+[WIP] Pretty much the same as the above but different :)

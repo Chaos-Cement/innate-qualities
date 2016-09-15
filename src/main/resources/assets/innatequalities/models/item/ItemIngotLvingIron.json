@@ -1,6 +1,6 @@
 {
     "parent":"innatequalities:item/StandardItem",
     "textures": {
-        "layer0": "innatequalities:item/ingotLivingIron"
+        "layer0": "innatequalities:items/ingotLivingIron"
     }
 }

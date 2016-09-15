@@ -1,6 +1,6 @@
 {
     "parent":"innatequalities:item/StandardItem",
     "textures": {
-        "layer0": "innatequalities:item/acorn"
+        "layer0": "innatequalities:items/acorn"
     }
 }

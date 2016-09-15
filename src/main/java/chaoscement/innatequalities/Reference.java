@@ -31,4 +31,27 @@ public class Reference {
 			return unlocalizedName;
 		}
 	}
+	
+	public static enum InnateQualitiesBlocks {
+		
+		// Block declaration (ALL CAPS UNLOCALIZED NAME) with unlocalized name and registry name
+		// Style: start unlocalized name with lower case; start registry name with Upper case Block
+		ORELIVINGIRON("oreLivingIron", "BlockOreLivingIron");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		InnateQualitiesBlocks(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+	}
 }
