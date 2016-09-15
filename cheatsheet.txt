@@ -1,0 +1,19 @@
+# Add an item
+1 In Reference
+1.1 Declare item with unlocalized and registry name (use comma separated list)
+2 In ModItems
+2.1 Add item with variable (use unlocalized name)
+2.2 Create new item object (use registry name)
+2.3 Add item to init (use registry name)
+2.4 Add item to register (use unlocalized name)
+2.5 Add item to registerRenders (use unlocalized name)
+3 Make item Class (in items package)
+3.1 Copy public class and import from an existing item
+3.2 Repolace class name and constructor name with registry name
+3.3 Replace two instances of old item declaration with the one created in 1.1
+4 In assets
+4.1 Add localized name to lang file (reference with unlocalized name)
+4.2 Make new JSON file (named the same as registry name)
+4.3 Copy in JSON from existing item
+4.4 Change layer0 line to the unlocalized name of the item (or whatever the png in the texture folder is name)
+4.5 Add png texture to item texture folder (named <whatever is in 4.4>.png)

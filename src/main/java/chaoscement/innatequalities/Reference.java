@@ -9,7 +9,11 @@ public class Reference {
 	public static final String SERVER_PROXY_CLASS = "chaoscement.innatequalities.proxy.ServerProxy";
 
 	public static enum InnateQualitiesItems {
-		ACORN("acorn", "ItemAcorn");
+		
+		// Item declaration (ALL CAPS UNLOCALIZED NAME) with unlocalized name and registry name
+		// Style: start unlocalized name with lower case; start registry name with Upper case Item
+		ACORN("acorn", "ItemAcorn"),
+		INGOTLIVINGIRON("ingotLivingIron", "ItemIngotLvingIron");
 		
 		private String unlocalizedName;
 		private String registryName;
