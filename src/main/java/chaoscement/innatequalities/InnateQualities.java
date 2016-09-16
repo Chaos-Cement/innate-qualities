@@ -1,9 +1,12 @@
 package chaoscement.innatequalities;
 
 
+import org.apache.logging.log4j.Logger;
+
 import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.init.ModItems;
 import chaoscement.innatequalities.proxy.CommonProxy;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,13 +15,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-
 @Mod(modid = Reference.MODID, version = Reference.VERSION, updateJSON = "https://raw.githubusercontent.com/Chaos-Cement/innate-qualities/master/update.json", useMetadata = true)
 public class InnateQualities
 {
 	
 	@Instance
     public static InnateQualities instance;
+	
+	 public static Logger logger;
     
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
@@ -26,22 +30,18 @@ public class InnateQualities
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
-		
-		ModItems.init();
-		ModItems.register();
-		
-		ModBlocks.init();
-		ModBlocks.register();
+		logger = event.getModLog();
+		proxy.preInit(event);
 	}
 	
 	@EventHandler
-	public void preInit(FMLInitializationEvent event) {
+	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");
-		proxy.init();
+		proxy.init(event);
 	}
 	
 	@EventHandler
-	public void preInit(FMLPostInitializationEvent event) {
+	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println("Post Init");
 	}
     
