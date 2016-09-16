@@ -1,5 +1,7 @@
 package chaoscement.innatequalities.proxy;
 
+import chaoscement.innatequalities.InnateQualities;
+import chaoscement.innatequalities.Reference;
 import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.init.ModItems;
 import chaoscement.innatequalities.util.GenerationHandler;
@@ -10,15 +12,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println("Init and register items");	
+		InnateQualities.logger.info("<" + InnateQualities.modID + "> Initializing and registering items");	
 		ModItems.init();
 		ModItems.register();
-		System.out.println("Init and register blocks");
+		InnateQualities.logger.info("<" + InnateQualities.modID + "> Initializing and registering blocks");	
 		ModBlocks.init();
 		ModBlocks.register();
 	}
 	
 	public void init(FMLInitializationEvent event) {
+		InnateQualities.logger.info("<" + InnateQualities.modID + "> Registering GenerationHandler with WorldGenerator");	
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 	}
 	

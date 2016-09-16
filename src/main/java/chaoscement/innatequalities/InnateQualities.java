@@ -1,6 +1,7 @@
 package chaoscement.innatequalities;
 
 
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import chaoscement.innatequalities.init.ModBlocks;
@@ -15,34 +16,46 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, version = Reference.VERSION, updateJSON = "https://raw.githubusercontent.com/Chaos-Cement/innate-qualities/master/update.json", useMetadata = true)
+@Mod(useMetadata = true,
+	 modid = InnateQualities.modID, 
+	 version = InnateQualities.modVersion, 
+	 updateJSON = "https://raw.githubusercontent.com/Chaos-Cement/innate-qualities/master/update.json")
+
 public class InnateQualities
 {
 	
-	@Instance
+	public static final String modID = Reference.MODID;
+	public static final String modVersion = "0.0.1";
+	public static final String modName = "Innate Qualities";
+	
+	@Instance(modID)
     public static InnateQualities instance;
 	
-	 public static Logger logger;
+	
+	public static Logger logger = LogManager.getLogger(modID);
     
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println("Pre Init");
-		logger = event.getModLog();
+		logger.warn("<" + modID + "> We should add a config just for fun!");
+		logger.info("<" + modID + "> PreInit stage started");
 		proxy.preInit(event);
+		logger.info("PreInit stage finished");
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		System.out.println("Init");
+		logger.info("<" + modID + "> Init stage started");
 		proxy.init(event);
+		logger.info("<" + modID + "> Init stage finished");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		System.out.println("Post Init");
+		logger.info("<" + modID + "> PostInit stage started");
+		logger.info("<" + modID + "> PostInit stage finshed");
 	}
     
 	

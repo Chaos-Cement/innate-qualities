@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class GenerationHandler implements IWorldGenerator {
 
 	//Overworld generators
-    private WorldGenerator genOreLivingIron;
+    private WorldGenMinable genOreLivingIron;
  
     @Override
     public void generate(Random rnd, int chunk_X, int chunk_Z, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
@@ -32,7 +32,7 @@ public class GenerationHandler implements IWorldGenerator {
     }
  
     public GenerationHandler() {
-        this.genOreLivingIron = new WorldGenMinable(ModBlocks.oreLivingIron.getDefaultState(), 8);
+        genOreLivingIron = new WorldGenMinable(ModBlocks.oreLivingIron.getDefaultState(), 8);
     }
  
     private void runGeneration(WorldGenerator gen, World world, Random rnd, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {
