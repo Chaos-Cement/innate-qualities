@@ -12,23 +12,33 @@ public class ModItems {
 	// Create item variable (unlocalized name)
 	public static Item acorn;
 	public static Item ingotLivingIron;
+	
+	// Crops Items
+	public static Item seedFoxglove;
+	public static Item flowerFoxglove;
 
 	public static void init() {
 		// Add to init (<unlocalizedName> = new <registryName>)
 		acorn = new ItemAcorn();
 		ingotLivingIron = new ItemIngotLvingIron();
+		seedFoxglove = new ItemSeedFoxglove();
+		flowerFoxglove = new ItemFlowerFoxglove();
 	}
 	
 	public static void register() {
 		// Add to register (unlocalized name)
 		GameRegistry.register(acorn);
 		GameRegistry.register(ingotLivingIron);
+		GameRegistry.register(seedFoxglove);
+		GameRegistry.register(flowerFoxglove);
 	}
 	
 	public static void registerRenders() {
 		// Add to registerRenders (unlocalized name)
 		registerRender(acorn);
 		registerRender(ingotLivingIron);
+		registerRender(seedFoxglove);
+		registerRender(flowerFoxglove);
 	}
 	
 	private static void registerRender(Item item) {

@@ -1,0 +1,50 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "cross"
+	},
+	"variants": {
+		"age": {
+			"0": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/0"
+				}
+			},
+			"1": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/0"
+				}
+			},
+			"2": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/1"
+				}
+			},
+			"3": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/1"
+				}
+			},
+			"4": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/2"
+				}
+			},
+			"5": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/2"
+				}
+			},
+			"6": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/2"
+				}
+			},
+			"7": {
+				"textures": {
+					"cross": "innatequalities:blocks/foxglove/3"
+				}
+			}	
+		}
+	}
+}

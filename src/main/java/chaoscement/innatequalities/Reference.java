@@ -12,7 +12,11 @@ public class Reference {
 		// Item declaration (ALL CAPS UNLOCALIZED NAME) with unlocalized name and registry name
 		// Style: start unlocalized name with lower case; start registry name with Upper case Item
 		ACORN("acorn", "ItemAcorn"),
-		INGOTLIVINGIRON("ingotLivingIron", "ItemIngotLvingIron");
+		INGOTLIVINGIRON("ingotLivingIron", "ItemIngotLvingIron"),
+		
+		// Crop stuff
+		SEEDFOXGLOVE("seedFoxglove", "ItemSeedFoxglove"),
+		FLOWERFOXGLOVE("flowerFoxglove", "ItemFlowerFoxglove");
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -41,6 +45,29 @@ public class Reference {
 		private String registryName;
 		
 		InnateQualitiesBlocks(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+	}
+	
+	public static enum InnateQualitiesCrops {
+		
+		// Block declaration (ALL CAPS UNLOCALIZED NAME) with unlocalized name and registry name
+		// Style: start unlocalized name with lower case; start registry name with Upper case Block
+		CROPFOXGLOVE("cropFoxglove", "BlockCropFoxglove");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		InnateQualitiesCrops(String unlocalizedName, String registryName) {
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
 		}

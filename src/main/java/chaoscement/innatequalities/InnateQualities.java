@@ -42,7 +42,7 @@ public class InnateQualities
 		logger.warn("<" + modID + "> We should add a config just for fun!");
 		logger.info("<" + modID + "> PreInit stage started");
 		proxy.preInit(event);
-		logger.info("PreInit stage finished");
+		logger.info("<" + modID + "> PreInit stage finished");
 	}
 	
 	@EventHandler

@@ -1,4 +1,7 @@
 item.acorn.name=Acorn
 item.ingotLivingIron.name=Living Iron Ingot
+item.seedFoxglove.name=Foxglove Seed
+item.flowerFoxglove.name=Foxglove Flower
 
 tile.oreLivingIron.name=Living Iron Ore
+tile.cropFoxglove.name=Foxglove
