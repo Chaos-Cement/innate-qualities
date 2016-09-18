@@ -7,6 +7,7 @@ import chaoscement.innatequalities.init.ModItems;
 import chaoscement.innatequalities.util.GenerationHandler;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -25,6 +26,10 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		InnateQualities.logger.info("<" + InnateQualities.modID + "> Registering GenerationHandler with WorldGenerator");	
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
+	}
+	
+	public void postInit(FMLPostInitializationEvent event) {
+		
 	}
 	
 	public void registerItemRenderer(Item item) {

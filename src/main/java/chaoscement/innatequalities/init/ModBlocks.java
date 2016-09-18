@@ -16,6 +16,10 @@ public class ModBlocks {
 	// Crop blocks
 	public static BlockCropFoxglove cropFoxglove;
 	
+	// Tree Stuff
+	public static Block treeElderLog;
+	public static Block treeElderLeaf;
+	
 	public static void init() {
 		// Add to init (<unlocalizedName> = new <registryName>)
 		oreLivingIron = new BlockOreLivingIron();
