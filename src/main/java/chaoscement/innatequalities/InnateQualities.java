@@ -55,7 +55,6 @@ public class InnateQualities
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("<" + modID + "> PostInit stage started");
-		proxy.postInit(event);
 		logger.info("<" + modID + "> PostInit stage finshed");
 	}
     
