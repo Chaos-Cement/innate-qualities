@@ -4,7 +4,7 @@ import chaoscement.innatequalities.InnateQualities;
 import chaoscement.innatequalities.Reference;
 import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.init.ModItems;
-import chaoscement.innatequalities.util.GenerationHandler;
+import chaoscement.innatequalities.util.gen.GenerationHandler;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
