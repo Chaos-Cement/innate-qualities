@@ -6,6 +6,7 @@ import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.init.ModCrafting;
 import chaoscement.innatequalities.init.ModItems;
 import chaoscement.innatequalities.util.GenerationHandler;
+import chaoscement.innatequalities.util.features.TestTree;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -25,7 +26,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent event) {
 		InnateQualities.logger.info("<" + InnateQualities.modID + "> Registering GenerationHandler with WorldGenerator");	
-		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
+		GameRegistry.registerWorldGenerator(new GenerationHandler(), 1);
 		InnateQualities.logger.info("<" + InnateQualities.modID + "> Registering recipes");
 		ModCrafting.registerShapedCrafting();
 		ModCrafting.registerSmelting();

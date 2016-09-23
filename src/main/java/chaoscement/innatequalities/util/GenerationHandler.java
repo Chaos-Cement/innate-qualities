@@ -3,6 +3,8 @@ package chaoscement.innatequalities.util;
 import java.util.Random;
 
 import chaoscement.innatequalities.init.ModBlocks;
+import chaoscement.innatequalities.util.features.TestTree;
+import chaoscement.innatequalities.util.features.TreeElder;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -15,12 +17,14 @@ public class GenerationHandler implements IWorldGenerator {
 
 	//Overworld generators
     private WorldGenMinable genOreLivingIron;
+    private TestTree treeTest;
  
     @Override
     public void generate(Random rnd, int chunk_X, int chunk_Z, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         switch(world.provider.getDimension()) {
             case 0: //Overworld
                 this.runGeneration(genOreLivingIron, world, rnd, chunk_X, chunk_Z, 20, 0, 64);
+                this.generateSurface(world, rnd, chunk_X, chunk_Z);
                 break;
             case 1: //Nether
  
@@ -30,9 +34,22 @@ public class GenerationHandler implements IWorldGenerator {
                 break;
         }
     }
+    
+    private void generateSurface(World world, Random random, int x, int z)
+    {
+    	for(int i = 0; i < 100; i++) // 15 is rarity
+    	{
+    	    int randPosX=x + random.nextInt(16);
+    	    int randPosY= 64+ random.nextInt(100); //Max Y coordinate
+    	    int randPosZ=z + random.nextInt(16);
+    	    //int randPosY= world.getActualHeight(); //(new BlockPos(randPosX, randPosZ));
+    	    treeTest.generate(world, random, new BlockPos(randPosX, randPosY, randPosZ));
+    	}
+    }
  
     public GenerationHandler() {
         genOreLivingIron = new WorldGenMinable(ModBlocks.oreLivingIron.getDefaultState(), 8);
+        treeTest = new TestTree(true);
     }
  
     private void runGeneration(WorldGenerator gen, World world, Random rnd, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {
