@@ -11,14 +11,26 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 	
 	// Create block variable (unlocalized name)
+	
+	// Ores
 	public static Block oreLivingIron;
+	
+	// Trees
+	public static Block treeElderLog;
+	public static Block treeElderLeaf;
 	
 	// Crop blocks
 	public static BlockCropFoxglove cropFoxglove;
 	
 	public static void init() {
 		// Add to init (<unlocalizedName> = new <registryName>)
+		
+		// Ores
 		oreLivingIron = new BlockOreLivingIron();
+		
+		// Trees
+		treeElderLog = new BlockTreeElderLog();
+		treeElderLeaf = new BlockTreeElderLeaf();
 		
 		// Crops
 		cropFoxglove = new BlockCropFoxglove();
@@ -26,7 +38,15 @@ public class ModBlocks {
 	}
 	
 	public static void register() {
+		
+		// Ores
 		registerBlock(oreLivingIron);
+		
+		// Trees
+		registerBlock(treeElderLog);
+		registerBlock(treeElderLeaf);
+		
+		// Crops
 		registerBlock(cropFoxglove, null);
 		
 	}
@@ -76,7 +96,15 @@ public class ModBlocks {
 	
 	public static void registerRenders() {
 		// Add to registerRenders (unlocalized name)
+		
+		// Ores
 		registerRender(oreLivingIron);
+		
+		// Trees
+		registerRender(treeElderLog);
+		registerRender(treeElderLeaf);
+		
+		// Crops
 		registerRender(cropFoxglove);
 	}
 	
