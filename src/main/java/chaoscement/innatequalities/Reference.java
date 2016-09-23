@@ -39,7 +39,9 @@ public class Reference {
 		
 		// Block declaration (ALL CAPS UNLOCALIZED NAME) with unlocalized name and registry name
 		// Style: start unlocalized name with lower case; start registry name with Upper case Block
-		ORELIVINGIRON("oreLivingIron", "BlockOreLivingIron");
+		ORELIVINGIRON("oreLivingIron", "BlockOreLivingIron"),
+		TREEELDERLOG("treeElderLog", "BlockTreeElderLog"),
+		TREEELDERLEAF("treeElderLeaf", "BlockTreeElderLeaf");
 		
 		private String unlocalizedName;
 		private String registryName;
