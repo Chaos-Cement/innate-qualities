@@ -2,9 +2,12 @@ package chaoscement.innatequalities.util;
 
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import chaoscement.innatequalities.InnateQualities;
 import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.util.features.TestTree;
-import chaoscement.innatequalities.util.features.TreeElder;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -24,7 +27,7 @@ public class GenerationHandler implements IWorldGenerator {
         switch(world.provider.getDimension()) {
             case 0: //Overworld
                 this.runGeneration(genOreLivingIron, world, rnd, chunk_X, chunk_Z, 20, 0, 64);
-                this.generateSurface(world, rnd, chunk_X, chunk_Z);
+                this.generateSurface(world, rnd, chunk_X, chunk_Z, 20);
                 break;
             case 1: //Nether
  
@@ -35,15 +38,20 @@ public class GenerationHandler implements IWorldGenerator {
         }
     }
     
-    private void generateSurface(World world, Random random, int x, int z)
+    private void generateSurface(World world, Random random, int x, int z, int chancesToSpawn)
     {
-    	for(int i = 0; i < 100; i++) // 15 is rarity
+    	for(int i = 0; i < chancesToSpawn; i++)
     	{
-    	    int randPosX=x + random.nextInt(16);
-    	    int randPosY= 64+ random.nextInt(100); //Max Y coordinate
-    	    int randPosZ=z + random.nextInt(16);
-    	    //int randPosY= world.getActualHeight(); //(new BlockPos(randPosX, randPosZ));
-    	    treeTest.generate(world, random, new BlockPos(randPosX, randPosY, randPosZ));
+    	    int randPosX = x + random.nextInt(16);
+    	    int randPosY = 50 + random.nextInt(50); //Max Y coordinate
+    	    int randPosZ = z + random.nextInt(16);
+    	    // int randPosY = ;
+    	    //System.out.println("Trying to make a tree at X:" + randPosX + " Y:" + randPosY + " Z:" +randPosZ);
+    	    InnateQualities.logger.warn("Trying to make a tree at X:" + randPosX + " Y:" + randPosY + " Z:" +randPosZ);
+    	    boolean tree = treeTest.generate(world, random, new BlockPos(randPosX, randPosY, randPosZ));
+    	    if (tree) {
+    	    	InnateQualities.logger.warn("Made a tree at X:" + randPosX + " Y:" + randPosY + " Z:" +randPosZ);
+    	    }
     	}
     }
  

@@ -1,7 +1,6 @@
 package chaoscement.innatequalities.blocks;
 
 import chaoscement.innatequalities.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 

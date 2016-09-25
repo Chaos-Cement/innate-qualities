@@ -4,10 +4,6 @@ import java.util.Random;
 
 import chaoscement.innatequalities.init.ModBlocks;
 import net.minecraft.block.BlockCocoa;
-import net.minecraft.block.BlockLeaves;
-import net.minecraft.block.BlockOldLeaf;
-import net.minecraft.block.BlockOldLog;
-import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;

@@ -3,6 +3,6 @@
         "axis=y":    { "model": "innatequalities:treeElderLog" },
         "axis=z":     { "model": "innatequalities:treeElderLog", "x": 90 },
         "axis=x":     { "model": "innatequalities:treeElderLog", "x": 90, "y": 90 },
-        "axis=none":   { "model": "innatequalities:treeElderLog" }
+        "axis=none":   { "model": "innatequalities:treeElderLogBark" }
     }
 }
