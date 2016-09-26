@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 	
 	// Create block variable (unlocalized name)
+	public static Block firePit;
 	
 	// Ores
 	public static Block oreLivingIron;
@@ -24,6 +25,7 @@ public class ModBlocks {
 	
 	public static void init() {
 		// Add to init (<unlocalizedName> = new <registryName>)
+		firePit = new BlockFirePit();
 		
 		// Ores
 		oreLivingIron = new BlockOreLivingIron();
@@ -38,6 +40,8 @@ public class ModBlocks {
 	}
 	
 	public static void register() {
+		
+		registerBlock(firePit);
 		
 		// Ores
 		registerBlock(oreLivingIron);
@@ -73,29 +77,9 @@ public class ModBlocks {
 		return block;
 	}
 	
-//	private static void registerBlock(Block block) {
-//		// Add to register (unlocalized name)
-//		GameRegistry.register(block);
-//		ItemBlock item = new ItemBlock(block);
-//		
-//		if (item != null) {
-//			item.setRegistryName(block.getRegistryName());
-//			GameRegistry.register(item);
-//			}
-//	}
-	
-//	private static void registerBlock(Block block, ItemBlock itemBlock) {
-//		// Add to register (unlocalized name)
-//		GameRegistry.register(block);
-//		GameRegistry.register(itemBlock);
-//
-//		if (block instanceof BlockBase) {
-//			((BlockBase)block).registerItemModel(itemBlock);
-//		}
-//	}
-	
 	public static void registerRenders() {
 		// Add to registerRenders (unlocalized name)
+		registerRender(firePit);
 		
 		// Ores
 		registerRender(oreLivingIron);
