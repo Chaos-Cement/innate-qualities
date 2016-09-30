@@ -1,5 +1,6 @@
 package chaoscement.innatequalities.items;
 
+import chaoscement.innatequalities.InnateQualities;
 import chaoscement.innatequalities.Reference;
 import net.minecraft.item.Item;
 
@@ -11,6 +12,7 @@ public class ItemIngotLvingIron extends Item {
 		// Use ALL CAPS reference (unlocalized name)
 		setUnlocalizedName(Reference.InnateQualitiesItems.INGOTLIVINGIRON.getUnlocalizedName());
 		setRegistryName(Reference.InnateQualitiesItems.INGOTLIVINGIRON.getRegistryName()); 
+		setCreativeTab(InnateQualities.CREATIVE_TAB);
 	}
 
 }

@@ -6,5 +6,7 @@ item.flowerFoxglove.name=Foxglove Flower
 tile.oreLivingIron.name=Living Iron Ore
 tile.cropFoxglove.name=Foxglove
 
-tile.treeElderLog.name=Elder Tree
-tile.treeElderLeaf.name=Elder Tree Leaves
+tile.treeElderLog.name=Elder Wood
+tile.treeElderLeaf.name=Elder Leaves
+
+itemGroup.tabMod=Innate Qualities

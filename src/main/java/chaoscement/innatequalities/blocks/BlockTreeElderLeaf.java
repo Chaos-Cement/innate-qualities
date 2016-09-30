@@ -1,5 +1,6 @@
 package chaoscement.innatequalities.blocks;
 
+import chaoscement.innatequalities.InnateQualities;
 import chaoscement.innatequalities.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
@@ -12,6 +13,7 @@ public class BlockTreeElderLeaf extends Block{
 		setUnlocalizedName(Reference.InnateQualitiesBlocks.TREEELDERLEAF.getUnlocalizedName());
 		setRegistryName(Reference.InnateQualitiesBlocks.TREEELDERLEAF.getRegistryName());
 		setHardness(1.0F);
+		setCreativeTab(InnateQualities.CREATIVE_TAB);
 	}
 
 }

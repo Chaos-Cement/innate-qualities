@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import chaoscement.innatequalities.init.ModBlocks;
 import chaoscement.innatequalities.init.ModItems;
 import chaoscement.innatequalities.proxy.CommonProxy;
-
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -30,12 +30,13 @@ public class InnateQualities
 	
 	@Instance(modID)
     public static InnateQualities instance;
-	
+	 
 	
 	public static Logger logger = LogManager.getLogger(modID);
     
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
+	public static CreativeTabs CREATIVE_TAB = new ModTab();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
